@@ -102,8 +102,8 @@ The app is composed of polished, reusable sections that create a full storytelli
 VelvetRose/
 ├─ README.md
 ├─ Design.md
-├─ hero-bouquet.jpg
-├─ ...image assets
+├─ screenshots/
+│  └─ ...project preview images
 └─ app/
 	 ├─ src/
 	 │  ├─ sections/
@@ -159,7 +159,7 @@ npm run preview
 ## Notes
 
 - The main app lives inside the `app` directory.
-- Root-level image assets are included and reused by the app/public folder.
+- Screenshot assets for GitHub preview are in the `screenshots` directory.
 - Design and motion direction are documented in detail in [Design.md](./Design.md).
 
 ---
