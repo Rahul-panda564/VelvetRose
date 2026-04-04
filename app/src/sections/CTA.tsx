@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { assetPath } from '@/lib/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,7 +69,7 @@ export default function CTA() {
         className="absolute inset-0 scale-110"
       >
         <img
-          src="/cta-background.jpg"
+          src={assetPath('cta-background.jpg')}
           alt="Beautiful floral arrangement"
           className="w-full h-full object-cover"
         />

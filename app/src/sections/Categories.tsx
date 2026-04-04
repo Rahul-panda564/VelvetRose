@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowRight } from 'lucide-react';
+import { categories } from '@/data/products';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,12 @@ export default function Categories() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
+  const categoryCounts: Record<string, number> = {
+    roses: 24,
+    peonies: 18,
+    tulips: 32,
+    ranunculus: 15,
+  };
 
   useEffect(() => {
     const triggers: ScrollTrigger[] = [];
@@ -85,37 +92,6 @@ export default function Categories() {
     };
   }, []);
 
-  const categories = [
-    {
-      id: 'roses',
-      name: 'Roses',
-      image: '/category-roses.jpg',
-      description: 'Timeless symbols of love and passion',
-      count: 24,
-    },
-    {
-      id: 'peonies',
-      name: 'Peonies',
-      image: '/category-peonies.jpg',
-      description: 'Lush blooms of romance and prosperity',
-      count: 18,
-    },
-    {
-      id: 'tulips',
-      name: 'Tulips',
-      image: '/category-tulips.jpg',
-      description: 'Cheerful harbingers of spring',
-      count: 32,
-    },
-    {
-      id: 'ranunculus',
-      name: 'Ranunculus',
-      image: '/category-ranunculus.jpg',
-      description: 'Delicate layers of ethereal beauty',
-      count: 15,
-    },
-  ];
-
   return (
     <section
       id="categories"
@@ -189,7 +165,7 @@ export default function Categories() {
                 <div className="absolute inset-x-0 bottom-0 p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-bloom">
                   <p className="text-white/80 text-sm mb-2">{category.description}</p>
                   <div className="flex items-center gap-2 text-white text-sm font-medium">
-                    <span>{category.count} Products</span>
+                    <span>{categoryCounts[category.id]} Products</span>
                     <ArrowRight className="h-4 w-4" />
                   </div>
                 </div>
