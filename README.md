@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+	<a href="https://rahul-panda564.github.io/VelvetRose/" target="_blank" rel="noopener noreferrer"><strong>Visit Website</strong></a>
+</p>
+
+<p align="center">
 	A premium florist storefront experience crafted with rich motion, elegant typography, and editorial-style layouts.
 </p>
 
