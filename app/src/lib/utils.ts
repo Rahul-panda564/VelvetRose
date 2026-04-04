@@ -6,5 +6,5 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function assetPath(path: string) {
-  return `${import.meta.env.BASE_URL}${path}`
+  return `${import.meta.env.BASE_URL}screenshots/${path}`
 }
