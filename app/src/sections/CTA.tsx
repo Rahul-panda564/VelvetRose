@@ -104,7 +104,7 @@ export default function CTA() {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-dark-brown rounded-full px-10 py-6 text-base font-medium transition-all duration-300"
+              className="border-white bg-transparent text-white hover:bg-white hover:text-dark-brown rounded-full px-10 py-6 text-base font-medium transition-all duration-300"
             >
               View Collections
             </Button>
